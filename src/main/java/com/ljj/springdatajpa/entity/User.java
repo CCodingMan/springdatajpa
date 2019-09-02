@@ -1,6 +1,7 @@
 package com.ljj.springdatajpa.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.ljj.springdatajpa.base.BaseEntity;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,7 +16,7 @@ import java.io.Serializable;
 @Entity
 @Table(name = "user")
 @JsonIgnoreProperties(value = {"hibernateLazyInitializer", "handler"})
-public class User implements Serializable {
+public class User extends BaseEntity implements Serializable {
     private static final long serialVersionUID = 1735885941625444810L;
     @Id
     @GeneratedValue
